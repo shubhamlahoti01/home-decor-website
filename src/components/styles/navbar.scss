@@ -1,0 +1,116 @@
+.nav-bar {
+  svg {
+    cursor: pointer;
+  }
+  display: flex;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  height: 4rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  .nav-logo {
+    font-family: "Yellowtail", cursive;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  a {
+    color: black;
+    font-size: 15px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      display: flex;
+      align-items: center;
+      margin-inline: 18px;
+      a:hover {
+        font-weight: 600;
+        border-bottom: 2px solid grey;
+      }
+      a.active {
+        font-weight: 600;
+        border-bottom: 2px solid grey;
+      }
+    }
+  }
+  .nav-btns {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav-bar {
+    a {
+      color: black;
+      font-size: 12px;
+    }
+    .nav-logo {
+      font-size: 2rem;
+    }
+    ul {
+      li {
+        margin-inline: 12px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .nav-bar {
+    justify-content: space-between;
+    padding-inline: 1rem;
+
+    ul.close {
+      display: none;
+    }
+    ul.open {
+      top: 0;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 50%;
+      background-color: white;
+      padding-top: 5rem;
+      border-top-left-radius: 10%;
+      box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.2);
+      right: 0;
+      animation: slide-in 0.3s ease-in;
+      li {
+        padding-block: 1rem;
+        width: 100%;
+        // box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+        &:hover {
+          background-color: rgb(237, 237, 237);
+          a {
+            font-weight: 600;
+          }
+        }
+        a {
+          margin-inline: auto;
+          &:hover {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    .nav-btns {
+      display: block;
+      z-index: 100;
+    }
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

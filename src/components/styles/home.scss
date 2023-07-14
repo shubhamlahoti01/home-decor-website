@@ -1,0 +1,84 @@
+.home-page {
+  // .home-section {
+  // }
+  .hs1 {
+    height: 100vh;
+    width: 100%;
+    // height: 50vh; in small screens
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.6)
+      url("https://alexisring.com/wp-content/uploads/2023/02/1-web-or-mls-Photo-1.jpg");
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    h1 {
+      color: white;
+      font-weight: 800;
+      font-family: "Ysabeau SC", sans-serif;
+    }
+  }
+  .home-about {
+    min-height: 80vh;
+    margin-top: 1rem;
+    width: 80%;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    display: flex;
+    margin-inline: auto;
+    img {
+      width: 40%;
+      object-position: center;
+      object-fit: cover;
+    }
+    .home-about-details {
+      margin-left: 1rem;
+      height: 100%;
+      h1 {
+        font-size: 3rem;
+        font-weight: 400;
+      }
+
+      p {
+        margin-block: 2rem;
+      }
+      a {
+        border: 1px solid black;
+        color: black;
+        padding: 0.5rem 1rem;
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+  .home-portfolio {
+    min-height: 90vh;
+    margin-top: 3rem;
+    background-color: #212729;
+
+    color: white;
+  }
+}
+@media screen and (max-width: 700px) {
+  .home-page {
+    .hs1 {
+      height: 50vh;
+      h1 {
+        font-size: 1rem;
+      }
+    }
+    .home-about {
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.contact-us {
+  min-height: 100vh;
+  // border: 2px solid red;
+  background-color: rgb(237, 237, 237);
+  display: flex;
+  padding-top: 5rem;
+  .contact-container {
+    background-color: white;
+    border: 5px solid #212729;
+    height: 95%;
+    width: 80%;
+    margin-inline: auto;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    .contact-left {
+      // border: 2px solid red;
+      width: 30%;
+      height: 100%;
+      .clhead {
+        // background-color: yellow;
+        h1 {
+          font-size: 2rem;
+          font-family: "Yellowtail", cursive;
+          margin-bottom: 10px;
+          font-weight: 400;
+        }
+      }
+      .cldetails {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // border: 1px solid red;
+        height: 90%;
+
+        .cldetails-cards {
+          // background-color: yellow;
+          margin-left: 1rem;
+          .cldetails-card {
+            display: flex;
+            padding-bottom: 1rem;
+            svg {
+              margin-right: 1rem;
+            }
+            .cldetails-card-r {
+              h3 {
+                font-size: 15px;
+              }
+              p {
+                font-size: 12px;
+              }
+              h4 {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        ul {
+          display: flex;
+          justify-content: flex-start;
+          padding-left: 1rem;
+          li {
+            padding: 0 5px;
+            a svg {
+              color: black;
+              box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+            }
+          }
+        }
+      }
+    }
+    .contact-right {
+      background-color: #212729;
+      border-radius: 50px;
+      width: 70%;
+      height: 100%;
+      padding: 2rem;
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 70%;
+        // border: 1px solid red;
+        input {
+          background-color: rgb(237, 237, 237);
+          padding: 1rem;
+          margin-top: 1rem;
+          border-radius: 1rem;
+        }
+        button {
+          background-color: white;
+          color: #212729;
+          border-radius: 20%;
+          cursor: pointer;
+          margin-top: 2rem;
+          height: 40px;
+          font-weight: 600;
+          font-size: 20px;
+
+          &:hover {
+            background-color: rgb(237, 237, 237);
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact-us {
+    .contact-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      padding: none;
+      .contact-left {
+        width: 100%;
+      }
+      .contact-right {
+        width: 100%;
+        form {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
