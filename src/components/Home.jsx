@@ -2,6 +2,7 @@ import React from "react";
 import "./styles/home.scss";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import ImageGallery from "./ImageGallery";
 
 const Home = () => {
   const portfolioItems = [
@@ -48,7 +49,9 @@ const Home = () => {
       </div>
       <div className="home-portfolio">
         <h1>Portfolio</h1>
-        <div className="portfolio"></div>
+        <div className="portfolio">
+          <ImageGallery />
+        </div>
       </div>
       <div className="home-section">
         <h1>testimonials</h1>
