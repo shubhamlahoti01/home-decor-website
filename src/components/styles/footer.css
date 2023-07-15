@@ -1,0 +1,39 @@
+.footer-container {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #0e76a8;
+}
+
+.copywrite {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-bottom: 10px;
+  }
+}
