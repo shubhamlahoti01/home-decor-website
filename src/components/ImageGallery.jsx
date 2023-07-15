@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import "./styles/imageGallery.css"; // Import your CSS file for styling
+import ImageModal from "./ImageModal";
 
 const ImageGallery = () => {
   const images = [
@@ -34,17 +35,47 @@ const ImageGallery = () => {
     // Animation only occurs once when the section comes into view
     threshold: 0.2, // Trigger the animation when the section is 10% in view
   });
+  const [selectedImage, setSelectedImage] = useState(null);
 
+  const openModal = (imageUrl) => {
+    setSelectedImage(imageUrl);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+  // return (
+  //   <div ref={ref} className={`gallery-container ${inView ? "visible" : ""}`}>
+  //     {images.map((image) => (
+  //       <img
+  //         key={image.id}
+  //         src={image.src}
+  //         alt={image.alt}
+  //         className="gallery-image"
+  //       />
+  //     ))}
+  //   </div>
+  // );
   return (
     <div ref={ref} className={`gallery-container ${inView ? "visible" : ""}`}>
-      {images.map((image) => (
+      {images.map((image, index) => (
         <img
           key={image.id}
           src={image.src}
           alt={image.alt}
-          className="gallery-image"
+          className={`gallery-image fade-in-animation delay-${index + 1}`}
+          onClick={() => {
+            openModal(image.src);
+          }}
         />
       ))}
+      {selectedImage && (
+        <ImageModal
+          imageUrl={selectedImage}
+          altText="Image"
+          onClose={closeModal}
+        />
+      )}
     </div>
   );
 };
