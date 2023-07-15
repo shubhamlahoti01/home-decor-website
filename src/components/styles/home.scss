@@ -69,8 +69,33 @@
     margin-top: 3rem;
     padding-block: 1rem;
     background-color: #212729;
-
     color: white;
+    .portfolio {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      p {
+        color: rgb(214, 214, 214);
+        text-transform: uppercase;
+        font-size: 10px;
+      }
+      .portfolio-button {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        margin-top: 1rem;
+        background: transparent;
+        color: rgb(214, 214, 214);
+        text-transform: uppercase;
+        border: 2px solid rgb(214, 214, 214);
+        // transition: all 0.4s ease-in;
+        &:hover {
+          background-color: rgb(214, 214, 214);
+          color: black;
+          transform: scale(1.02);
+          font-weight: 600;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 700px) {

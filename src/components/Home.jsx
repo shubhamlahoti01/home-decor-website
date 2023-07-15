@@ -51,6 +51,11 @@ const Home = () => {
         <h1>Portfolio</h1>
         <div className="portfolio">
           <ImageGallery />
+          <p>Click on the images</p>
+          <p>To view a larger version for better detail</p>
+          <button className="portfolio-button">
+            check out more of our work
+          </button>
         </div>
       </div>
       <div className="home-section">
